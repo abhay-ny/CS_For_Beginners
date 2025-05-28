@@ -1,0 +1,428 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS FOR BEGINNERS</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #f2f5f8;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #495057;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: #6c757d;
+    border-radius: 5px;
+}
+
+
+
+nav button {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav button:hover {
+    background-color: #6c757d;
+    border-radius: 5px;
+}
+
+
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #495057;
+    min-width: 160px;
+    z-index: 2; /* Ensures dropdown displays above other elements */
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #6c757d;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer h5 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #FF6600;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.social a {
+    margin: 0 5px;
+    color: white;
+}
+
+.d-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-square {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-dark {
+    background-color: #343a40;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-primary {
+    color: #007bff;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.px-sm-3 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.px-lg-5 {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.letter-spacing {
+    letter-spacing: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-md-left {
+    text-align: left;
+}
+
+/* Font Awesome Icons */
+.fa {
+    margin-right: 0.5rem;
+}
+
+/* Header Styles */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('img/page-header.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 0;
+    margin-bottom: 90px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header h3 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.page-header .breadcrumb {
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.page-header .breadcrumb p {
+    margin: 0;
+}
+
+.page-header .breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.page-header .breadcrumb i {
+    margin: 0 5px;
+}
+
+.page-header .breadcrumb a:hover {
+    color: #f39c12;
+}
+.bms-logo {
+            position: absolute;
+            top: 20px; /* Adjust the top position as needed */
+            right: 20px; /* Adjust the right position as needed */
+            width: 50px; /* Adjust the width as needed */
+            height: auto;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    <header>
+        <h1>
+            <span style="color: #FF6600;">CS</span>
+            <span style="color: #44425A;">for Beginners</span>
+        </h1>
+    </header>
+    <!-- Header End -->
+
+    <!-- Navbar Start -->
+    <nav>
+        <div class="dropdown">
+            <a href="#" id="subjectsDropdown">Subjects <i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-content" id="subjectsList">
+                <a href="/c_page">C</a>
+                <a href="/cplusplus_page">C++</a>
+                <a href="/java">JAVA</a>
+                <a href="/python_page">PYTHON</a>
+                <a href="/Mysql_page">MySQL</a>
+                <a href="/html_page">HTML</a>
+                <a href="/css_page">CSS</a>
+                <a href="/java_script_page">JavaScript</a>
+                
+            </div>
+        </div>
+        <a href="/index" style="text-decoration: none; color: white; margin-right: 2rem;">Home</a>
+        <a href="/about" style="text-decoration: none; color: white; margin-right: 2rem;">About</a>
+        <a href="/Coding_Etiquette" style="text-decoration: none; color: white; margin-right: 2rem;">Coding Etiquette</a>
+        <a href="/creator_of_this_website" style="text-decoration: none; color: white;">Creators of this website</a>
+        <a href="/sign_up" style="text-decoration: none; color: white;">Request a course</a>
+        <img src="img/bms_logo.jpg" alt="BMS College Logo" class="bms-logo">
+
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+<div class="page-header" style="margin-bottom: 20px;">
+    <h3>Creators of this website</h3>
+</div>
+<!-- Page Header End -->
+
+<!-- Meet the Team Section Start -->
+<div class="team-section" style="padding: 30px 20px; background-color: #f4f4f4; text-align: center;">
+    <h4 style="font-size: 32px; color: #44425A; margin-bottom: 20px;">Meet the Team</h4>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;">
+
+        <!-- Team Member 1 -->
+        <div style="width: 150px; text-align: center;">
+            <img src="img/abhay.jpg" alt="Team Member 1" style="width: 100%; border-radius: 50%;">
+            <h5 style="color: #FF6600; margin-top: 10px;">ABHAY NY</h5>
+            <p style="color: #495057; font-size: 16px;">Frontend Developer</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div style="width: 150px; text-align: center;">
+            <img src="img/team-2.jpg" alt="Team Member 2" style="width: 100%; border-radius: 50%;">
+            <h5 style="color: #FF6600; margin-top: 10px;">ARIZ </h5>
+            <p style="color: #495057; font-size: 16px;">Backend Developer</p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div style="width: 150px; text-align: center;">
+            <img src="img/team-3.jpg" alt="Team Member 3" style="width: 100%; border-radius: 50%;">
+            <h5 style="color: #FF6600; margin-top: 10px;">ARNAV</h5>
+            <p style="color: #495057; font-size: 16px;">Database Developer</p>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div style="width: 150px; text-align: center;">
+            <img src="img/team-4.jpg" alt="Team Member 4" style="width: 100%; border-radius: 50%;">
+            <h5 style="color: #FF6600; margin-top: 10px;">AYUSH</h5>
+            <p style="color: #495057; font-size: 16px;">Database Developer</p>
+        </div>
+
+    </div>
+</div>
+<!-- Meet the Team Section End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-12">
+                <div class="row footer-section">
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4 letter-spacing">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt"></i>BMS college of engineering</p>
+                        <p><i class="fa fa-phone-alt"></i>+91 12345 67890</p>
+                        <p><i class="fa fa-envelope"></i>student24@bmsce.ac.in</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5 text-center">
+                        <h3 class="text-primary text-uppercase mb-4 letter-spacing"></h3>
+                        <p style="font-family: 'Courier New', monospace;"><h3><em>"Any fool can write code that a computer <br>can understand. Good programmers write code <br>that humans can understand"</em></h3></p>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4 letter-spacing">Quick Links</h5>
+                        <div class="d-flex flex-column">
+                            <a class="text-white mb-2" href="/c_page"><i class="fa fa-angle-right"></i>C</a>
+                            <a class="text-white mb-2" href="/cplusplus_page"><i class="fa fa-angle-right"></i>C++</a>
+                            <a class="text-white mb-2" href="/java"><i class="fa fa-angle-right"></i>Java</a>
+                            <a class="text-white mb-2" href="/python_page"><i class="fa fa-angle-right"></i>Python</a>
+                            <a class="text-white mb-2" href="/Mysql_page"><i class="fa fa-angle-right"></i>MySQL</a>
+                            <a class="text-white mb-2" href="/html_page"><i class="fa fa-angle-right"></i>HTML</a>
+                            <a class="text-white mb-2" href="/css_page"><i class="fa fa-angle-right"></i>CSS</a>
+                            <a class="text-white mb-2" href="/java_script_page"><i class="fa fa-angle-right"></i>JavaScript</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="text-center text-md-left">
+                <p class="mb-2">&copy; <a class="text-primary" href="/index">CS FOR BEGINNERS</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <script>
+        document.getElementById("subjectsDropdown").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevents the link from jumping
+            const dropdownContent = document.getElementById("subjectsList");
+            
+            // Toggle the display of dropdown
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    
+        // Close the dropdown if clicked outside
+        window.addEventListener("click", function(event) {
+            if (!event.target.matches('#subjectsDropdown')) {
+                const dropdownContent = document.getElementById("subjectsList");
+                dropdownContent.style.display = "none";
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS FOR BEGINNERS</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f2f5f8;
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #495057;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Left side navigation links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            background-color: #6c757d;
+            border-radius: 5px;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #495057;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #6c757d;
+        }
+
+        /* Sign Up Button */
+        .sign-up {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        .sign-up:hover {
+            background-color: #0056b3;
+        }
+        
+        .footer-section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Remaining CSS styles */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer h5 {
+            margin: 0;
+            margin-bottom: 10px;
+            color: #FF6600;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .social a {
+            margin: 0 5px;
+            color: white;
+        }
+
+        /* Additional styles for structure and spacing */
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    <header>
+        <h1>
+            <span style="color: #FF6600;">CS</span>
+            <span style="color: #44425A;">for Beginners</span>
+        </h1>
+    </header>
+    <!-- Header End -->
+
+    <!-- Navbar Start -->
+    <nav>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="#" id="subjectsDropdown">Subjects <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content" id="subjectsList">
+                    <a href="c_page.html">C</a>
+                    <a href="c++_page.html">C++</a>
+                    <a href="java.html">JAVA</a>
+                    <a href="python_page.html">PYTHON</a>
+                    <a href="Mysql_page.html">MySQL</a>
+                    <a href="html_page.html">HTML</a>
+                    <a href="css_page.html">CSS</a>
+                    <a href="java_script_page.html">JavaScript</a>
+                </div>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Coding Etiquette.html">Coding Etiquette</a>
+            <a href="creator_of_this_website.html">Creators of this website</a>
+        </div>
+        <a href="sign_up.html" class="sign-up">Sign Up</a>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- JavaScript for Dropdown Functionality -->
+    <script>
+        const dropdownButton = document.getElementById("subjectsDropdown");
+        const dropdownContent = document.getElementById("subjectsList");
+
+        dropdownButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        });
+
+        window.addEventListener("click", function (event) {
+            if (!dropdownButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+                dropdownContent.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
